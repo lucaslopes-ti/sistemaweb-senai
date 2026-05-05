@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-App<sistemaweb>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "senai.App",
+            "projectName": "sistemaweb",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
