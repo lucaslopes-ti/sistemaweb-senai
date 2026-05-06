@@ -14,15 +14,17 @@ public class HomeController {
     }
 
     @GetMapping("/mensagem")
-    public String mensagem(Model model) {
-        model.addAttribute("mensagem", "Servidor, me responda! Houston, temos um problema!");
-        return "mensagem";
+    public ModelAndView mensagem() {
+        ModelAndView modelAndView = new ModelAndView("mensagem");
+        modelAndView.setViewName("mensagem");
+        modelAndView.addObject("mensagem", "Servidor, me responda! Houston, temos um problema!");
+        return modelAndView;
     }
 
-    // Crie o @GetMapping("/saudacao") 
     @GetMapping("/saudacao")
     public ModelAndView saudacao() {
         ModelAndView modelAndView = new ModelAndView("saudacao");
+        modelAndView.setViewName("saudacao");
         modelAndView.addObject("saudacao", "Olá, seja bem-vindo ao Spring Boot!");
         return modelAndView;
     }
