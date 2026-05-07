@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Detalhar Cliente</title>
+    <style>body{padding-top:1rem}</style>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1>Detalhar Cliente</h1>
+            <a class="btn btn-secondary" th:href="@{/cliente}">Voltar</a>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <dl class="row mb-0">
+                    <dt class="col-sm-3">ID</dt>
+                    <dd class="col-sm-9" th:text="${cliente.id}"></dd>
+
+                    <dt class="col-sm-3">Nome</dt>
+                    <dd class="col-sm-9" th:text="${cliente.nome}"></dd>
+
+                    <dt class="col-sm-3">Data de Nascimento</dt>
+                    <dd class="col-sm-9" th:text="${cliente.dataNascimento}"></dd>
+
+                    <dt class="col-sm-3">Profissão</dt>
+                    <dd class="col-sm-9" th:text="${cliente.profissao}"></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

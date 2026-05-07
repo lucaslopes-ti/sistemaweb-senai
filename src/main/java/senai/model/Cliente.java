@@ -7,6 +7,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -23,7 +25,7 @@ public class Cliente {
     private String nome;
 
     @Column(nullable = false, name = "data_nascimento")
-    private Date dataNascimento;
+    private LocalDate dataNascimento;
 
     @Column(nullable = false)
     private String profissao;
@@ -31,7 +33,7 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(Long id, String nome, Date dataNascimento, String profissao) {
+    public Cliente(Long id, String nome, LocalDate dataNascimento, String profissao) {
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -54,11 +56,11 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public Date getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
